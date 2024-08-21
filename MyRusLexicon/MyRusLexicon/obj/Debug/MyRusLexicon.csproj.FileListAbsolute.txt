@@ -1,0 +1,10 @@
+D:\Programming\MyRusLexicon\MyRusLexicon\bin\Debug\MyRusLexicon.exe.config
+D:\Programming\MyRusLexicon\MyRusLexicon\bin\Debug\MyRusLexicon.exe
+D:\Programming\MyRusLexicon\MyRusLexicon\bin\Debug\MyRusLexicon.pdb
+D:\Programming\MyRusLexicon\MyRusLexicon\obj\Debug\MyRusLexicon.csproj.AssemblyReference.cache
+D:\Programming\MyRusLexicon\MyRusLexicon\obj\Debug\MyRusLexicon.Properties.Resources.resources
+D:\Programming\MyRusLexicon\MyRusLexicon\obj\Debug\MyRusLexicon.csproj.GenerateResource.cache
+D:\Programming\MyRusLexicon\MyRusLexicon\obj\Debug\MyRusLexicon.csproj.CoreCompileInputs.cache
+D:\Programming\MyRusLexicon\MyRusLexicon\obj\Debug\MyRusLexicon.exe
+D:\Programming\MyRusLexicon\MyRusLexicon\obj\Debug\MyRusLexicon.pdb
+D:\Programming\MyRusLexicon\MyRusLexicon\obj\Debug\MyRusLexicon.Form_main.resources
