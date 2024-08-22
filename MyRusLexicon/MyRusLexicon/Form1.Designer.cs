@@ -44,15 +44,15 @@
             this.name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.type = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel = new System.Windows.Forms.Panel();
+            this.richTextBox_exampleSentenceTranslation2 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox_exampleSentenceTranslation1 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox_exampleSentence2 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox_exampleSentence1 = new System.Windows.Forms.RichTextBox();
             this.label_textExampleSentence = new System.Windows.Forms.Label();
             this.label_textTranslation = new System.Windows.Forms.Label();
             this.label_partOfSpeech = new System.Windows.Forms.Label();
             this.label_translation = new System.Windows.Forms.Label();
             this.label_word = new System.Windows.Forms.Label();
-            this.richTextBox_exampleSentence1 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox_exampleSentence2 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox_exampleSentenceTranslation1 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox_exampleSentenceTranslation2 = new System.Windows.Forms.RichTextBox();
             this.menuStrip.SuspendLayout();
             this.panel.SuspendLayout();
             this.SuspendLayout();
@@ -102,6 +102,7 @@
             this.toolStripMenuItem_makeNew.Name = "toolStripMenuItem_makeNew";
             this.toolStripMenuItem_makeNew.Size = new System.Drawing.Size(71, 20);
             this.toolStripMenuItem_makeNew.Text = "新規登録";
+            this.toolStripMenuItem_makeNew.Click += new System.EventHandler(this.toolStripMenuItem_makeNew_Click);
             // 
             // toolStripMenuItem_edit
             // 
@@ -187,6 +188,58 @@
             this.panel.Size = new System.Drawing.Size(632, 535);
             this.panel.TabIndex = 16;
             // 
+            // richTextBox_exampleSentenceTranslation2
+            // 
+            this.richTextBox_exampleSentenceTranslation2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.richTextBox_exampleSentenceTranslation2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox_exampleSentenceTranslation2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox_exampleSentenceTranslation2.Location = new System.Drawing.Point(30, 474);
+            this.richTextBox_exampleSentenceTranslation2.Name = "richTextBox_exampleSentenceTranslation2";
+            this.richTextBox_exampleSentenceTranslation2.ReadOnly = true;
+            this.richTextBox_exampleSentenceTranslation2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.richTextBox_exampleSentenceTranslation2.Size = new System.Drawing.Size(570, 46);
+            this.richTextBox_exampleSentenceTranslation2.TabIndex = 20;
+            this.richTextBox_exampleSentenceTranslation2.Text = "例文";
+            // 
+            // richTextBox_exampleSentenceTranslation1
+            // 
+            this.richTextBox_exampleSentenceTranslation1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.richTextBox_exampleSentenceTranslation1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox_exampleSentenceTranslation1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox_exampleSentenceTranslation1.Location = new System.Drawing.Point(30, 333);
+            this.richTextBox_exampleSentenceTranslation1.Name = "richTextBox_exampleSentenceTranslation1";
+            this.richTextBox_exampleSentenceTranslation1.ReadOnly = true;
+            this.richTextBox_exampleSentenceTranslation1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.richTextBox_exampleSentenceTranslation1.Size = new System.Drawing.Size(570, 46);
+            this.richTextBox_exampleSentenceTranslation1.TabIndex = 19;
+            this.richTextBox_exampleSentenceTranslation1.Text = "例文";
+            // 
+            // richTextBox_exampleSentence2
+            // 
+            this.richTextBox_exampleSentence2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.richTextBox_exampleSentence2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox_exampleSentence2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox_exampleSentence2.Location = new System.Drawing.Point(30, 413);
+            this.richTextBox_exampleSentence2.Name = "richTextBox_exampleSentence2";
+            this.richTextBox_exampleSentence2.ReadOnly = true;
+            this.richTextBox_exampleSentence2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.richTextBox_exampleSentence2.Size = new System.Drawing.Size(570, 55);
+            this.richTextBox_exampleSentence2.TabIndex = 18;
+            this.richTextBox_exampleSentence2.Text = "例文";
+            // 
+            // richTextBox_exampleSentence1
+            // 
+            this.richTextBox_exampleSentence1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.richTextBox_exampleSentence1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox_exampleSentence1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox_exampleSentence1.Location = new System.Drawing.Point(30, 272);
+            this.richTextBox_exampleSentence1.Name = "richTextBox_exampleSentence1";
+            this.richTextBox_exampleSentence1.ReadOnly = true;
+            this.richTextBox_exampleSentence1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.richTextBox_exampleSentence1.Size = new System.Drawing.Size(570, 55);
+            this.richTextBox_exampleSentence1.TabIndex = 17;
+            this.richTextBox_exampleSentence1.Text = "例文";
+            // 
             // label_textExampleSentence
             // 
             this.label_textExampleSentence.AutoSize = true;
@@ -234,58 +287,6 @@
             this.label_word.Size = new System.Drawing.Size(508, 55);
             this.label_word.TabIndex = 0;
             this.label_word.Text = "単語名";
-            // 
-            // richTextBox_exampleSentence1
-            // 
-            this.richTextBox_exampleSentence1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.richTextBox_exampleSentence1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox_exampleSentence1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox_exampleSentence1.Location = new System.Drawing.Point(30, 272);
-            this.richTextBox_exampleSentence1.Name = "richTextBox_exampleSentence1";
-            this.richTextBox_exampleSentence1.ReadOnly = true;
-            this.richTextBox_exampleSentence1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.richTextBox_exampleSentence1.Size = new System.Drawing.Size(570, 55);
-            this.richTextBox_exampleSentence1.TabIndex = 17;
-            this.richTextBox_exampleSentence1.Text = "例文";
-            // 
-            // richTextBox_exampleSentence2
-            // 
-            this.richTextBox_exampleSentence2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.richTextBox_exampleSentence2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox_exampleSentence2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox_exampleSentence2.Location = new System.Drawing.Point(30, 413);
-            this.richTextBox_exampleSentence2.Name = "richTextBox_exampleSentence2";
-            this.richTextBox_exampleSentence2.ReadOnly = true;
-            this.richTextBox_exampleSentence2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.richTextBox_exampleSentence2.Size = new System.Drawing.Size(570, 55);
-            this.richTextBox_exampleSentence2.TabIndex = 18;
-            this.richTextBox_exampleSentence2.Text = "例文";
-            // 
-            // richTextBox_exampleSentenceTranslation1
-            // 
-            this.richTextBox_exampleSentenceTranslation1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.richTextBox_exampleSentenceTranslation1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox_exampleSentenceTranslation1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox_exampleSentenceTranslation1.Location = new System.Drawing.Point(30, 333);
-            this.richTextBox_exampleSentenceTranslation1.Name = "richTextBox_exampleSentenceTranslation1";
-            this.richTextBox_exampleSentenceTranslation1.ReadOnly = true;
-            this.richTextBox_exampleSentenceTranslation1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.richTextBox_exampleSentenceTranslation1.Size = new System.Drawing.Size(570, 46);
-            this.richTextBox_exampleSentenceTranslation1.TabIndex = 19;
-            this.richTextBox_exampleSentenceTranslation1.Text = "例文";
-            // 
-            // richTextBox_exampleSentenceTranslation2
-            // 
-            this.richTextBox_exampleSentenceTranslation2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.richTextBox_exampleSentenceTranslation2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox_exampleSentenceTranslation2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox_exampleSentenceTranslation2.Location = new System.Drawing.Point(30, 474);
-            this.richTextBox_exampleSentenceTranslation2.Name = "richTextBox_exampleSentenceTranslation2";
-            this.richTextBox_exampleSentenceTranslation2.ReadOnly = true;
-            this.richTextBox_exampleSentenceTranslation2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.richTextBox_exampleSentenceTranslation2.Size = new System.Drawing.Size(570, 46);
-            this.richTextBox_exampleSentenceTranslation2.TabIndex = 20;
-            this.richTextBox_exampleSentenceTranslation2.Text = "例文";
             // 
             // Form_main
             // 

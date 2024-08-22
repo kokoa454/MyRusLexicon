@@ -81,6 +81,12 @@ namespace MyRusLexicon
                 }
             }
         }
+
+        private void toolStripMenuItem_makeNew_Click(object sender, EventArgs e)
+        {
+            Form_makeNew form_makeNew = new Form_makeNew();
+            form_makeNew.Show();
+        }
     }
 
     //start DB settings
