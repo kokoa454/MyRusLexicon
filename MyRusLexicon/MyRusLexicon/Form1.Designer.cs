@@ -115,6 +115,7 @@
             this.toolStripMenuItem_delete.Name = "toolStripMenuItem_delete";
             this.toolStripMenuItem_delete.Size = new System.Drawing.Size(45, 20);
             this.toolStripMenuItem_delete.Text = "削除";
+            this.toolStripMenuItem_delete.Click += new System.EventHandler(this.toolStripMenuItem_delete_Click);
             // 
             // toolStripMenuItem_about
             // 

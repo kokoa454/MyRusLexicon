@@ -87,6 +87,47 @@ namespace MyRusLexicon
             Form_makeNew form_makeNew = new Form_makeNew(this);
             form_makeNew.Show();
         }
+
+        private void toolStripMenuItem_delete_Click(object sender, EventArgs e)
+        {
+            if (listView.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("削除する単語を選んでください。", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                DialogResult result = MessageBox.Show("本当にこの単語を削除しますか？", "削除 - MyRusLexicon", MessageBoxButtons.OKCancel);
+
+                if (result == DialogResult.OK)
+                {
+                    foreach (ListViewItem item in listView.SelectedItems)
+                    {
+                        dbHelper.deleteWord(item.Text);
+                        listView.Items.Remove(item);
+
+                        label_word.Text = "";
+                        label_translation.Text = "";
+                        label_partOfSpeech.Text = "";
+                        richTextBox_exampleSentence1.Text = "";
+                        richTextBox_exampleSentenceTranslation1.Text = "";
+                        richTextBox_exampleSentence2.Text = "";
+                        richTextBox_exampleSentenceTranslation2.Text = "";
+
+                        label_word.Visible = false;
+                        label_textTranslation.Visible = false;
+                        label_translation.Visible = false;
+                        label_partOfSpeech.Visible = false;
+                        label_textExampleSentence.Visible = false;
+                        richTextBox_exampleSentence1.Visible = false;
+                        richTextBox_exampleSentenceTranslation1.Visible = false;
+                        richTextBox_exampleSentence2.Visible = false;
+                        richTextBox_exampleSentenceTranslation2.Visible = false;
+                    }
+                }
+            }
+
+            return;
+        }
     }
 
     //start DB settings
@@ -159,6 +200,24 @@ namespace MyRusLexicon
                     command.ExecuteNonQuery();
                 }
             }
+        }
+
+        public void deleteWord(string word)
+        {
+            using (var connection = new SQLiteConnection(connectionString))
+            {
+                connection.Open();
+
+                string query = "DELETE FROM Words WHERE Word = @Word";
+
+                using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Word", word);
+                    command.ExecuteNonQuery();
+                }
+            }
+
+            
         }
 
         public List<WordInfo> GetWords()
