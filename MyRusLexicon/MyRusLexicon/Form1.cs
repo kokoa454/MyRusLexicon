@@ -23,9 +23,11 @@ namespace MyRusLexicon
             InitializeComponent();
             dbHelper = new DatabaseHelper();
             dbHelper.initializeDatabase();
+            dbHelper.makeExample();
             loadWords();
             listView.SelectedIndexChanged += listView_SelectedIndexChanged;
             listView.GridLines = true;
+            
 
             /*
             label_translation.Visible = false;
@@ -63,15 +65,17 @@ namespace MyRusLexicon
     //start DB settings
     public class DatabaseHelper
     {
-        private string connectionString = "Data Source=data.db;Version=3;"; //directry bellow of bin
+        private string connectionString = "Data Source=data.db;Version=3;";
+        private int flg = 0;
 
         public void initializeDatabase()
         {
-            string dbFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "data.db");
+            string dbFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "data.db"); //directry bellow of bin
 
-            if (!File.Exists(dbFilePath)) //make new db file and examples of words if not exists
+            if (!File.Exists(dbFilePath)) //make new db file if not exists
             {
                 SQLiteConnection.CreateFile(dbFilePath);
+                flg = 1;
             }
 
             using (var connection = new SQLiteConnection($"Data Source={dbFilePath};Version=3;"))
@@ -88,6 +92,14 @@ namespace MyRusLexicon
                 {
                     command.ExecuteNonQuery();
                 }
+            }
+        }
+
+        public void makeExample()
+        {
+            if (flg == 1)
+            {
+                addWord("Россия");
             }
         }
 
