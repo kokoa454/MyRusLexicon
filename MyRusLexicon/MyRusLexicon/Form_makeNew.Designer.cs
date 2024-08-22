@@ -223,7 +223,7 @@
             this.Controls.Add(this.label_textWord);
             this.Controls.Add(this.button_close);
             this.Name = "Form_makeNew";
-            this.Text = "Form_makeNew";
+            this.Text = "新規登録 - MyRusLexicon";
             this.ResumeLayout(false);
             this.PerformLayout();
 
