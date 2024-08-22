@@ -36,21 +36,23 @@
             this.label_textExampleSentenceTranslation1 = new System.Windows.Forms.Label();
             this.label_textExampleSentence2 = new System.Windows.Forms.Label();
             this.label_textExampleSentenceTranslation2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox_exampleSentence1 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox_exampleSentenceTranslation1 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox_exampleSentence2 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox_exampleSentenceTranslation2 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox_partOfSpeech = new System.Windows.Forms.RichTextBox();
+            this.richTextBox_translation = new System.Windows.Forms.RichTextBox();
+            this.richTextBox_word = new System.Windows.Forms.RichTextBox();
+            this.button_OK = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button_close
             // 
-            this.button_close.Location = new System.Drawing.Point(639, 513);
+            this.button_close.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_close.Location = new System.Drawing.Point(603, 513);
             this.button_close.Name = "button_close";
             this.button_close.Size = new System.Drawing.Size(75, 25);
-            this.button_close.TabIndex = 0;
+            this.button_close.TabIndex = 9;
             this.button_close.Text = "キャンセル";
             this.button_close.UseVisualStyleBackColor = true;
             this.button_close.Click += new System.EventHandler(this.button_close_Click);
@@ -125,78 +127,92 @@
             this.label_textExampleSentenceTranslation2.TabIndex = 7;
             this.label_textExampleSentenceTranslation2.Text = "例文訳②";
             // 
-            // textBox1
+            // richTextBox_exampleSentence1
             // 
-            this.textBox1.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBox1.Location = new System.Drawing.Point(163, 39);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(575, 31);
-            this.textBox1.TabIndex = 8;
+            this.richTextBox_exampleSentence1.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox_exampleSentence1.Location = new System.Drawing.Point(163, 199);
+            this.richTextBox_exampleSentence1.Name = "richTextBox_exampleSentence1";
+            this.richTextBox_exampleSentence1.Size = new System.Drawing.Size(575, 70);
+            this.richTextBox_exampleSentence1.TabIndex = 4;
+            this.richTextBox_exampleSentence1.Text = "";
             // 
-            // textBox2
+            // richTextBox_exampleSentenceTranslation1
             // 
-            this.textBox2.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBox2.Location = new System.Drawing.Point(163, 81);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(575, 31);
-            this.textBox2.TabIndex = 9;
+            this.richTextBox_exampleSentenceTranslation1.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox_exampleSentenceTranslation1.Location = new System.Drawing.Point(163, 290);
+            this.richTextBox_exampleSentenceTranslation1.Name = "richTextBox_exampleSentenceTranslation1";
+            this.richTextBox_exampleSentenceTranslation1.Size = new System.Drawing.Size(575, 37);
+            this.richTextBox_exampleSentenceTranslation1.TabIndex = 5;
+            this.richTextBox_exampleSentenceTranslation1.Text = "";
             // 
-            // textBox3
+            // richTextBox_exampleSentence2
             // 
-            this.textBox3.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBox3.Location = new System.Drawing.Point(163, 128);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(575, 31);
-            this.textBox3.TabIndex = 10;
+            this.richTextBox_exampleSentence2.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox_exampleSentence2.Location = new System.Drawing.Point(163, 354);
+            this.richTextBox_exampleSentence2.Name = "richTextBox_exampleSentence2";
+            this.richTextBox_exampleSentence2.Size = new System.Drawing.Size(575, 70);
+            this.richTextBox_exampleSentence2.TabIndex = 6;
+            this.richTextBox_exampleSentence2.Text = "";
             // 
-            // richTextBox1
+            // richTextBox_exampleSentenceTranslation2
             // 
-            this.richTextBox1.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.richTextBox1.Location = new System.Drawing.Point(163, 199);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(575, 65);
-            this.richTextBox1.TabIndex = 11;
-            this.richTextBox1.Text = "";
+            this.richTextBox_exampleSentenceTranslation2.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox_exampleSentenceTranslation2.Location = new System.Drawing.Point(163, 442);
+            this.richTextBox_exampleSentenceTranslation2.Name = "richTextBox_exampleSentenceTranslation2";
+            this.richTextBox_exampleSentenceTranslation2.Size = new System.Drawing.Size(575, 36);
+            this.richTextBox_exampleSentenceTranslation2.TabIndex = 7;
+            this.richTextBox_exampleSentenceTranslation2.Text = "";
             // 
-            // richTextBox2
+            // richTextBox_partOfSpeech
             // 
-            this.richTextBox2.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.richTextBox2.Location = new System.Drawing.Point(163, 290);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(575, 37);
-            this.richTextBox2.TabIndex = 12;
-            this.richTextBox2.Text = "";
+            this.richTextBox_partOfSpeech.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox_partOfSpeech.Location = new System.Drawing.Point(163, 135);
+            this.richTextBox_partOfSpeech.Name = "richTextBox_partOfSpeech";
+            this.richTextBox_partOfSpeech.Size = new System.Drawing.Size(575, 36);
+            this.richTextBox_partOfSpeech.TabIndex = 3;
+            this.richTextBox_partOfSpeech.Text = "";
             // 
-            // richTextBox3
+            // richTextBox_translation
             // 
-            this.richTextBox3.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.richTextBox3.Location = new System.Drawing.Point(163, 354);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(575, 65);
-            this.richTextBox3.TabIndex = 13;
-            this.richTextBox3.Text = "";
+            this.richTextBox_translation.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox_translation.Location = new System.Drawing.Point(163, 84);
+            this.richTextBox_translation.Name = "richTextBox_translation";
+            this.richTextBox_translation.Size = new System.Drawing.Size(575, 36);
+            this.richTextBox_translation.TabIndex = 1;
+            this.richTextBox_translation.Text = "";
             // 
-            // richTextBox4
+            // richTextBox_word
             // 
-            this.richTextBox4.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.richTextBox4.Location = new System.Drawing.Point(163, 442);
-            this.richTextBox4.Name = "richTextBox4";
-            this.richTextBox4.Size = new System.Drawing.Size(575, 36);
-            this.richTextBox4.TabIndex = 14;
-            this.richTextBox4.Text = "";
+            this.richTextBox_word.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox_word.Location = new System.Drawing.Point(163, 42);
+            this.richTextBox_word.Name = "richTextBox_word";
+            this.richTextBox_word.Size = new System.Drawing.Size(575, 36);
+            this.richTextBox_word.TabIndex = 0;
+            this.richTextBox_word.Text = "";
+            // 
+            // button_OK
+            // 
+            this.button_OK.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_OK.Location = new System.Drawing.Point(108, 513);
+            this.button_OK.Name = "button_OK";
+            this.button_OK.Size = new System.Drawing.Size(75, 25);
+            this.button_OK.TabIndex = 8;
+            this.button_OK.Text = "確定";
+            this.button_OK.UseVisualStyleBackColor = true;
             // 
             // Form_makeNew
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
-            this.Controls.Add(this.richTextBox4);
-            this.Controls.Add(this.richTextBox3);
-            this.Controls.Add(this.richTextBox2);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.button_OK);
+            this.Controls.Add(this.richTextBox_word);
+            this.Controls.Add(this.richTextBox_translation);
+            this.Controls.Add(this.richTextBox_partOfSpeech);
+            this.Controls.Add(this.richTextBox_exampleSentenceTranslation2);
+            this.Controls.Add(this.richTextBox_exampleSentence2);
+            this.Controls.Add(this.richTextBox_exampleSentenceTranslation1);
+            this.Controls.Add(this.richTextBox_exampleSentence1);
             this.Controls.Add(this.label_textExampleSentenceTranslation2);
             this.Controls.Add(this.label_textExampleSentence2);
             this.Controls.Add(this.label_textExampleSentenceTranslation1);
@@ -222,12 +238,13 @@
         private System.Windows.Forms.Label label_textExampleSentenceTranslation1;
         private System.Windows.Forms.Label label_textExampleSentence2;
         private System.Windows.Forms.Label label_textExampleSentenceTranslation2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.RichTextBox richTextBox3;
-        private System.Windows.Forms.RichTextBox richTextBox4;
+        private System.Windows.Forms.RichTextBox richTextBox_exampleSentence1;
+        private System.Windows.Forms.RichTextBox richTextBox_exampleSentenceTranslation1;
+        private System.Windows.Forms.RichTextBox richTextBox_exampleSentence2;
+        private System.Windows.Forms.RichTextBox richTextBox_exampleSentenceTranslation2;
+        private System.Windows.Forms.RichTextBox richTextBox_partOfSpeech;
+        private System.Windows.Forms.RichTextBox richTextBox_translation;
+        private System.Windows.Forms.RichTextBox richTextBox_word;
+        private System.Windows.Forms.Button button_OK;
     }
 }
