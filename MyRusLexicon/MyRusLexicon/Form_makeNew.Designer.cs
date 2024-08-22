@@ -199,6 +199,7 @@
             this.button_OK.TabIndex = 8;
             this.button_OK.Text = "確定";
             this.button_OK.UseVisualStyleBackColor = true;
+            this.button_OK.Click += new System.EventHandler(this.button_OK_Click);
             // 
             // Form_makeNew
             // 

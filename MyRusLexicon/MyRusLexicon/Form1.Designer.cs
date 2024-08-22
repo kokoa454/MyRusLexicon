@@ -329,7 +329,6 @@
         private System.Windows.Forms.Label label_lineTop;
         private System.Windows.Forms.Label label_lineCenter;
         private System.Windows.Forms.Label label_lineMiddle;
-        private System.Windows.Forms.ListView listView;
         private System.Windows.Forms.ColumnHeader name;
         private System.Windows.Forms.ColumnHeader type;
         private System.Windows.Forms.Panel panel;
@@ -342,6 +341,7 @@
         private System.Windows.Forms.RichTextBox richTextBox_exampleSentenceTranslation2;
         private System.Windows.Forms.RichTextBox richTextBox_exampleSentenceTranslation1;
         private System.Windows.Forms.RichTextBox richTextBox_exampleSentence2;
+        public System.Windows.Forms.ListView listView;
     }
 }
 
