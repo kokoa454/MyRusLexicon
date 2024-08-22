@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SQLite;
 using System.IO;
+using System.Collections;
 
 namespace MyRusLexicon
 {
@@ -30,13 +31,13 @@ namespace MyRusLexicon
             label_translation.Visible = false;
             label_partOfSpeech.Visible = false;
             label_textExampleSentence.Visible = false;
-            label_exampleSentence1.Visible = false;
-            label_exampleSentenceTranslation1.Visible = false;
-            label_exampleSentence2.Visible = false;
-            label_exampleSentenceTranslation2.Visible = false;
+            richTextBox_exampleSentence1.Visible = false;
+            richTextBox_exampleSentenceTranslation1.Visible = false;
+            richTextBox_exampleSentence2.Visible = false;
+            richTextBox_exampleSentenceTranslation2.Visible = false;
         }
 
-        private void loadWords() //show listitems from DB
+        private void loadWords() //show list-items from DB
         {
             var wordList = dbHelper.GetWords();
 
@@ -46,6 +47,9 @@ namespace MyRusLexicon
                 item.SubItems.Add(word.PartOfSpeech);
                 listView.Items.Add(item);
             }
+
+            listView.ListViewItemSorter = new ListViewItemComparer(0);
+            listView.Sort();
         }
 
         private void listView_SelectedIndexChanged(object sender, EventArgs e)
@@ -62,18 +66,18 @@ namespace MyRusLexicon
                     label_translation.Visible = true;
                     label_partOfSpeech.Visible = true;
                     label_textExampleSentence.Visible = true;
-                    label_exampleSentence1.Visible = true;
-                    label_exampleSentenceTranslation1.Visible = true;
-                    label_exampleSentence2.Visible = true;
-                    label_exampleSentenceTranslation2.Visible = true;
+                    richTextBox_exampleSentence1.Visible = true;
+                    richTextBox_exampleSentenceTranslation1.Visible = true;
+                    richTextBox_exampleSentence2.Visible = true;
+                    richTextBox_exampleSentenceTranslation2.Visible = true;
 
                     label_word.Text = wordInfo.Word;
                     label_translation.Text = wordInfo.Translation;
                     label_partOfSpeech.Text = wordInfo.PartOfSpeech;
-                    label_exampleSentence1.Text = wordInfo.ExampleSentence1;
-                    label_exampleSentenceTranslation1.Text = wordInfo.ExampleSentenceTranslation1;
-                    label_exampleSentence2.Text = wordInfo.ExampleSentence2;
-                    label_exampleSentenceTranslation2.Text = wordInfo.ExampleSentenceTranslation2;
+                    richTextBox_exampleSentence1.Text = wordInfo.ExampleSentence1;
+                    richTextBox_exampleSentenceTranslation1.Text = wordInfo.ExampleSentenceTranslation1;
+                    richTextBox_exampleSentence2.Text = wordInfo.ExampleSentence2;
+                    richTextBox_exampleSentenceTranslation2.Text = wordInfo.ExampleSentenceTranslation2;
                 }
             }
         }
@@ -122,8 +126,8 @@ namespace MyRusLexicon
         {
             if (flg == 1)
             {
-                addWord("Россия", "ロシア", "名詞", "Я хочу побывать в России.", "私はロシアへ行きたい。", "Он уже уехал в Россию.", "彼はすでにロシアへ去ってしまったよ。");
-                addWord("Япония", "日本", "名詞", "В Японии находится филиал ДВФУ.", "日本にはロシア極東連邦総合大学の分校がある。", "", "");
+                addWord("Россия", "ロシア", "名詞", "Москва, столица России, славится своими историческими памятниками, такими как Красная площадь и Кремль.", "ロシアの首都であるモスクワは、赤の広場やクレムリンに代表されるように、歴史的建造物で有名だ。", "Когда я думаю о России, мне сразу приходят на ум бескрайние просторы Сибири и величественные горы Урала.", "ロシアについて考えていると、広大なシベリアと偉大なウラル山脈が頭に浮かぶ。");
+                addWord("Япония", "日本", "名詞", "В Японии находится филиал ДВФУ, и японские студенты изучают регионоведение Россиии.", "日本にはロシア極東連邦総合大学の分校があり、日本人学生達はロシア地域学を勉強している。", "Япония, страна восходящего солнца, известна своей уникальной культурой, где традиции гармонично сочетаются с передовыми технологиями и инновациями.", "日出る国、日本は伝統と先進技術が調和している独自の文化で知られている。");
             }
         }
 
@@ -213,4 +217,38 @@ namespace MyRusLexicon
     }
     //end DB settings
 
+    //start listview sort settings
+    public class ListViewItemComparer : IComparer
+    {
+        private int col;
+        private SortOrder order;
+
+        public ListViewItemComparer()
+        {
+            col = 0;
+            order = SortOrder.Ascending;
+        }
+
+        public ListViewItemComparer(int column)
+        {
+            col = column;
+            this.order = order;
+        }
+
+        public int Compare(object x, object y)
+        {
+            int result;
+
+            return String.Compare(((ListViewItem)x).SubItems[col].Text,
+                                  ((ListViewItem)y).SubItems[col].Text);
+
+            if(order == SortOrder.Descending)
+            {
+                result *= -1;
+            }
+
+            return result;
+        }
+    }
+    //end listview sort settings 
 }
