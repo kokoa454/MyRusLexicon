@@ -43,8 +43,16 @@
             this.listView = new System.Windows.Forms.ListView();
             this.name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.type = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label_bgRight = new System.Windows.Forms.Label();
+            this.panel = new System.Windows.Forms.Panel();
+            this.label_textExampleSentence = new System.Windows.Forms.Label();
+            this.label_textPartOffSpeech = new System.Windows.Forms.Label();
+            this.label_textTranslation = new System.Windows.Forms.Label();
+            this.label_exampleSentence = new System.Windows.Forms.Label();
+            this.label_partOfSpeech = new System.Windows.Forms.Label();
+            this.label_translation = new System.Windows.Forms.Label();
+            this.label_word = new System.Windows.Forms.Label();
             this.menuStrip.SuspendLayout();
+            this.panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBox_search
@@ -160,13 +168,90 @@
             this.type.Text = "品詞名";
             this.type.Width = 100;
             // 
-            // label_bgRight
+            // panel
             // 
-            this.label_bgRight.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label_bgRight.Location = new System.Drawing.Point(352, 25);
-            this.label_bgRight.Name = "label_bgRight";
-            this.label_bgRight.Size = new System.Drawing.Size(632, 537);
-            this.label_bgRight.TabIndex = 16;
+            this.panel.AutoScroll = true;
+            this.panel.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel.Controls.Add(this.label_textExampleSentence);
+            this.panel.Controls.Add(this.label_textPartOffSpeech);
+            this.panel.Controls.Add(this.label_textTranslation);
+            this.panel.Controls.Add(this.label_exampleSentence);
+            this.panel.Controls.Add(this.label_partOfSpeech);
+            this.panel.Controls.Add(this.label_translation);
+            this.panel.Controls.Add(this.label_word);
+            this.panel.Location = new System.Drawing.Point(352, 27);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(632, 535);
+            this.panel.TabIndex = 16;
+            // 
+            // label_textExampleSentence
+            // 
+            this.label_textExampleSentence.AutoSize = true;
+            this.label_textExampleSentence.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_textExampleSentence.Location = new System.Drawing.Point(28, 244);
+            this.label_textExampleSentence.Name = "label_textExampleSentence";
+            this.label_textExampleSentence.Size = new System.Drawing.Size(68, 31);
+            this.label_textExampleSentence.TabIndex = 6;
+            this.label_textExampleSentence.Text = "例文";
+            // 
+            // label_textPartOffSpeech
+            // 
+            this.label_textPartOffSpeech.AutoSize = true;
+            this.label_textPartOffSpeech.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_textPartOffSpeech.Location = new System.Drawing.Point(28, 151);
+            this.label_textPartOffSpeech.Name = "label_textPartOffSpeech";
+            this.label_textPartOffSpeech.Size = new System.Drawing.Size(82, 31);
+            this.label_textPartOffSpeech.TabIndex = 5;
+            this.label_textPartOffSpeech.Text = "品詞：";
+            // 
+            // label_textTranslation
+            // 
+            this.label_textTranslation.AutoSize = true;
+            this.label_textTranslation.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_textTranslation.Location = new System.Drawing.Point(28, 98);
+            this.label_textTranslation.Name = "label_textTranslation";
+            this.label_textTranslation.Size = new System.Drawing.Size(55, 31);
+            this.label_textTranslation.TabIndex = 4;
+            this.label_textTranslation.Text = "訳：";
+            // 
+            // label_exampleSentence
+            // 
+            this.label_exampleSentence.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_exampleSentence.Location = new System.Drawing.Point(28, 290);
+            this.label_exampleSentence.Name = "label_exampleSentence";
+            this.label_exampleSentence.Size = new System.Drawing.Size(578, 235);
+            this.label_exampleSentence.TabIndex = 3;
+            this.label_exampleSentence.Text = "例文";
+            // 
+            // label_partOfSpeech
+            // 
+            this.label_partOfSpeech.AutoSize = true;
+            this.label_partOfSpeech.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_partOfSpeech.Location = new System.Drawing.Point(116, 151);
+            this.label_partOfSpeech.Name = "label_partOfSpeech";
+            this.label_partOfSpeech.Size = new System.Drawing.Size(68, 31);
+            this.label_partOfSpeech.TabIndex = 2;
+            this.label_partOfSpeech.Text = "品詞";
+            // 
+            // label_translation
+            // 
+            this.label_translation.AutoSize = true;
+            this.label_translation.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_translation.Location = new System.Drawing.Point(89, 98);
+            this.label_translation.Name = "label_translation";
+            this.label_translation.Size = new System.Drawing.Size(41, 31);
+            this.label_translation.TabIndex = 1;
+            this.label_translation.Text = "訳";
+            // 
+            // label_word
+            // 
+            this.label_word.AutoSize = true;
+            this.label_word.Font = new System.Drawing.Font("Times New Roman", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_word.Location = new System.Drawing.Point(24, 21);
+            this.label_word.Name = "label_word";
+            this.label_word.Size = new System.Drawing.Size(168, 55);
+            this.label_word.TabIndex = 0;
+            this.label_word.Text = "単語名";
             // 
             // Form_main
             // 
@@ -174,7 +259,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(984, 561);
-            this.Controls.Add(this.label_bgRight);
+            this.Controls.Add(this.panel);
             this.Controls.Add(this.listView);
             this.Controls.Add(this.label_lineMiddle);
             this.Controls.Add(this.label_lineCenter);
@@ -189,6 +274,8 @@
             this.Text = "MyRusLexicon";
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
+            this.panel.ResumeLayout(false);
+            this.panel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -210,7 +297,14 @@
         private System.Windows.Forms.ListView listView;
         private System.Windows.Forms.ColumnHeader name;
         private System.Windows.Forms.ColumnHeader type;
-        private System.Windows.Forms.Label label_bgRight;
+        private System.Windows.Forms.Panel panel;
+        private System.Windows.Forms.Label label_word;
+        private System.Windows.Forms.Label label_partOfSpeech;
+        private System.Windows.Forms.Label label_translation;
+        private System.Windows.Forms.Label label_exampleSentence;
+        private System.Windows.Forms.Label label_textExampleSentence;
+        private System.Windows.Forms.Label label_textPartOffSpeech;
+        private System.Windows.Forms.Label label_textTranslation;
     }
 }
 
