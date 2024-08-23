@@ -50,9 +50,9 @@
             this.richTextBox_exampleSentence1 = new System.Windows.Forms.RichTextBox();
             this.label_textExampleSentence = new System.Windows.Forms.Label();
             this.label_textTranslation = new System.Windows.Forms.Label();
-            this.label_partOfSpeech = new System.Windows.Forms.Label();
-            this.label_translation = new System.Windows.Forms.Label();
-            this.label_word = new System.Windows.Forms.Label();
+            this.richTextBox_word = new System.Windows.Forms.RichTextBox();
+            this.richTextBox_partOfSpeech = new System.Windows.Forms.RichTextBox();
+            this.richTextBox_translation = new System.Windows.Forms.RichTextBox();
             this.menuStrip.SuspendLayout();
             this.panel.SuspendLayout();
             this.SuspendLayout();
@@ -182,9 +182,9 @@
             this.panel.Controls.Add(this.richTextBox_exampleSentence1);
             this.panel.Controls.Add(this.label_textExampleSentence);
             this.panel.Controls.Add(this.label_textTranslation);
-            this.panel.Controls.Add(this.label_partOfSpeech);
-            this.panel.Controls.Add(this.label_translation);
-            this.panel.Controls.Add(this.label_word);
+            this.panel.Controls.Add(this.richTextBox_word);
+            this.panel.Controls.Add(this.richTextBox_partOfSpeech);
+            this.panel.Controls.Add(this.richTextBox_translation);
             this.panel.Location = new System.Drawing.Point(352, 25);
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(832, 737);
@@ -201,6 +201,7 @@
             this.richTextBox_exampleSentenceTranslation2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
             this.richTextBox_exampleSentenceTranslation2.Size = new System.Drawing.Size(782, 45);
             this.richTextBox_exampleSentenceTranslation2.TabIndex = 20;
+            this.richTextBox_exampleSentenceTranslation2.TabStop = false;
             this.richTextBox_exampleSentenceTranslation2.Text = "例文";
             // 
             // richTextBox_exampleSentenceTranslation1
@@ -214,6 +215,7 @@
             this.richTextBox_exampleSentenceTranslation1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
             this.richTextBox_exampleSentenceTranslation1.Size = new System.Drawing.Size(780, 48);
             this.richTextBox_exampleSentenceTranslation1.TabIndex = 19;
+            this.richTextBox_exampleSentenceTranslation1.TabStop = false;
             this.richTextBox_exampleSentenceTranslation1.Text = "例文";
             // 
             // richTextBox_exampleSentence2
@@ -227,6 +229,7 @@
             this.richTextBox_exampleSentence2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
             this.richTextBox_exampleSentence2.Size = new System.Drawing.Size(782, 78);
             this.richTextBox_exampleSentence2.TabIndex = 18;
+            this.richTextBox_exampleSentence2.TabStop = false;
             this.richTextBox_exampleSentence2.Text = "例文";
             // 
             // richTextBox_exampleSentence1
@@ -240,6 +243,7 @@
             this.richTextBox_exampleSentence1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
             this.richTextBox_exampleSentence1.Size = new System.Drawing.Size(782, 78);
             this.richTextBox_exampleSentence1.TabIndex = 17;
+            this.richTextBox_exampleSentence1.TabStop = false;
             this.richTextBox_exampleSentence1.Text = "例文";
             // 
             // label_textExampleSentence
@@ -256,39 +260,50 @@
             // 
             this.label_textTranslation.AutoSize = true;
             this.label_textTranslation.Font = new System.Drawing.Font("Yu Mincho Demibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label_textTranslation.Location = new System.Drawing.Point(26, 147);
+            this.label_textTranslation.Location = new System.Drawing.Point(24, 150);
             this.label_textTranslation.Name = "label_textTranslation";
             this.label_textTranslation.Size = new System.Drawing.Size(69, 34);
             this.label_textTranslation.TabIndex = 4;
             this.label_textTranslation.Text = "訳：";
             // 
-            // label_partOfSpeech
+            // richTextBox_word
             // 
-            this.label_partOfSpeech.Font = new System.Drawing.Font("Yu Mincho Demibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label_partOfSpeech.Location = new System.Drawing.Point(681, 40);
-            this.label_partOfSpeech.Name = "label_partOfSpeech";
-            this.label_partOfSpeech.Size = new System.Drawing.Size(131, 27);
-            this.label_partOfSpeech.TabIndex = 2;
-            this.label_partOfSpeech.Text = "品詞名";
-            this.label_partOfSpeech.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.richTextBox_word.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.richTextBox_word.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox_word.Font = new System.Drawing.Font("Times New Roman", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox_word.Location = new System.Drawing.Point(20, 15);
+            this.richTextBox_word.Name = "richTextBox_word";
+            this.richTextBox_word.ReadOnly = true;
+            this.richTextBox_word.Size = new System.Drawing.Size(655, 112);
+            this.richTextBox_word.TabIndex = 21;
+            this.richTextBox_word.TabStop = false;
+            this.richTextBox_word.Text = "Слово";
             // 
-            // label_translation
+            // richTextBox_partOfSpeech
             // 
-            this.label_translation.Font = new System.Drawing.Font("Yu Mincho", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_translation.Location = new System.Drawing.Point(87, 147);
-            this.label_translation.Name = "label_translation";
-            this.label_translation.Size = new System.Drawing.Size(725, 102);
-            this.label_translation.TabIndex = 1;
-            this.label_translation.Text = "訳";
+            this.richTextBox_partOfSpeech.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.richTextBox_partOfSpeech.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox_partOfSpeech.Font = new System.Drawing.Font("Yu Mincho Demibold", 20.25F, System.Drawing.FontStyle.Bold);
+            this.richTextBox_partOfSpeech.Location = new System.Drawing.Point(679, 46);
+            this.richTextBox_partOfSpeech.Name = "richTextBox_partOfSpeech";
+            this.richTextBox_partOfSpeech.ReadOnly = true;
+            this.richTextBox_partOfSpeech.Size = new System.Drawing.Size(131, 44);
+            this.richTextBox_partOfSpeech.TabIndex = 22;
+            this.richTextBox_partOfSpeech.TabStop = false;
+            this.richTextBox_partOfSpeech.Text = "品詞名";
             // 
-            // label_word
+            // richTextBox_translation
             // 
-            this.label_word.Font = new System.Drawing.Font("Times New Roman", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_word.Location = new System.Drawing.Point(20, 17);
-            this.label_word.Name = "label_word";
-            this.label_word.Size = new System.Drawing.Size(655, 112);
-            this.label_word.TabIndex = 0;
-            this.label_word.Text = "単語名";
+            this.richTextBox_translation.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.richTextBox_translation.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox_translation.Font = new System.Drawing.Font("Yu Mincho", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.richTextBox_translation.Location = new System.Drawing.Point(101, 144);
+            this.richTextBox_translation.Name = "richTextBox_translation";
+            this.richTextBox_translation.ReadOnly = true;
+            this.richTextBox_translation.Size = new System.Drawing.Size(709, 102);
+            this.richTextBox_translation.TabIndex = 23;
+            this.richTextBox_translation.TabStop = false;
+            this.richTextBox_translation.Text = "訳";
             // 
             // Form_main
             // 
@@ -333,16 +348,16 @@
         private System.Windows.Forms.ColumnHeader name;
         private System.Windows.Forms.ColumnHeader type;
         private System.Windows.Forms.Panel panel;
-        private System.Windows.Forms.Label label_word;
-        private System.Windows.Forms.Label label_partOfSpeech;
-        private System.Windows.Forms.Label label_translation;
         private System.Windows.Forms.Label label_textExampleSentence;
         private System.Windows.Forms.Label label_textTranslation;
         private System.Windows.Forms.RichTextBox richTextBox_exampleSentence1;
-        private System.Windows.Forms.RichTextBox richTextBox_exampleSentenceTranslation2;
         private System.Windows.Forms.RichTextBox richTextBox_exampleSentenceTranslation1;
         private System.Windows.Forms.RichTextBox richTextBox_exampleSentence2;
         public System.Windows.Forms.ListView listView;
+        private System.Windows.Forms.RichTextBox richTextBox_exampleSentenceTranslation2;
+        private System.Windows.Forms.RichTextBox richTextBox_word;
+        private System.Windows.Forms.RichTextBox richTextBox_translation;
+        private System.Windows.Forms.RichTextBox richTextBox_partOfSpeech;
     }
 }
 

@@ -10,12 +10,19 @@ using System.Windows.Forms;
 using System.Data.SQLite;
 using System.IO;
 using System.Collections;
+using System.Runtime.InteropServices;
+
+//Remake UI of Form_edit like Form_makeNew
+//add search func
 
 namespace MyRusLexicon
 {
     public partial class Form_main : Form
     {
         private DatabaseHelper dbHelper;
+
+        [DllImport("User32.dll")]
+        static extern int HideCaret(IntPtr hWnd);
         public Form_main()
         {
             InitializeComponent();
@@ -26,15 +33,29 @@ namespace MyRusLexicon
             listView.SelectedIndexChanged += listView_SelectedIndexChanged;
             listView.GridLines = true;
             
-            label_word.Visible = false;
+            richTextBox_word.Visible = false;
             label_textTranslation.Visible = false;
-            label_translation.Visible = false;
-            label_partOfSpeech.Visible = false;
+            richTextBox_translation.Visible = false;
+            richTextBox_partOfSpeech.Visible = false;
             label_textExampleSentence.Visible = false;
             richTextBox_exampleSentence1.Visible = false;
             richTextBox_exampleSentenceTranslation1.Visible = false;
             richTextBox_exampleSentence2.Visible = false;
             richTextBox_exampleSentenceTranslation2.Visible = false;
+
+            richTextBox_word.Click += new EventHandler(hideCaret);
+            richTextBox_translation.Click += new EventHandler(hideCaret);
+            richTextBox_partOfSpeech.Click += new EventHandler(hideCaret);
+            richTextBox_exampleSentence1.Click += new EventHandler(hideCaret);
+            richTextBox_exampleSentenceTranslation1.Click += new EventHandler(hideCaret);
+            richTextBox_exampleSentence2.Click += new EventHandler(hideCaret);
+            richTextBox_exampleSentenceTranslation2.Click += new EventHandler(hideCaret);
+        }
+
+        private void hideCaret(object sender, EventArgs e)
+        {
+            RichTextBox name = sender as RichTextBox;
+            HideCaret(name.Handle);
         }
 
         private void loadWords() //show list-items from DB
@@ -67,19 +88,19 @@ namespace MyRusLexicon
 
                 if (wordInfo != null)
                 {
-                    label_word.Visible = true;
+                    richTextBox_word.Visible = true;
                     label_textTranslation.Visible = true;
-                    label_translation.Visible = true;
-                    label_partOfSpeech.Visible = true;
+                    richTextBox_translation.Visible = true;
+                    richTextBox_partOfSpeech.Visible = true;
                     label_textExampleSentence.Visible = true;
                     richTextBox_exampleSentence1.Visible = true;
                     richTextBox_exampleSentenceTranslation1.Visible = true;
                     richTextBox_exampleSentence2.Visible = true;
                     richTextBox_exampleSentenceTranslation2.Visible = true;
 
-                    label_word.Text = wordInfo.Word;
-                    label_translation.Text = wordInfo.Translation;
-                    label_partOfSpeech.Text = wordInfo.PartOfSpeech;
+                    richTextBox_word.Text = wordInfo.Word;
+                    richTextBox_translation.Text = wordInfo.Translation;
+                    richTextBox_partOfSpeech.Text = wordInfo.PartOfSpeech;
                     richTextBox_exampleSentence1.Text = wordInfo.ExampleSentence1;
                     richTextBox_exampleSentenceTranslation1.Text = wordInfo.ExampleSentenceTranslation1;
                     richTextBox_exampleSentence2.Text = wordInfo.ExampleSentence2;
@@ -111,18 +132,18 @@ namespace MyRusLexicon
                         dbHelper.deleteWord(item.Text);
                         listView.Items.Remove(item);
 
-                        label_word.Text = "";
-                        label_translation.Text = "";
-                        label_partOfSpeech.Text = "";
+                        richTextBox_word.Text = "";
+                        richTextBox_translation.Text = "";
+                        richTextBox_partOfSpeech.Text = "";
                         richTextBox_exampleSentence1.Text = "";
                         richTextBox_exampleSentenceTranslation1.Text = "";
                         richTextBox_exampleSentence2.Text = "";
                         richTextBox_exampleSentenceTranslation2.Text = "";
 
-                        label_word.Visible = false;
+                        richTextBox_word.Visible = false;
                         label_textTranslation.Visible = false;
-                        label_translation.Visible = false;
-                        label_partOfSpeech.Visible = false;
+                        richTextBox_translation.Visible = false;
+                        richTextBox_partOfSpeech.Visible = false;
                         label_textExampleSentence.Visible = false;
                         richTextBox_exampleSentence1.Visible = false;
                         richTextBox_exampleSentenceTranslation1.Visible = false;

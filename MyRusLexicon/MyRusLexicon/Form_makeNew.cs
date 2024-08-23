@@ -58,5 +58,10 @@ namespace MyRusLexicon
             richTextBox_exampleSentence2.Clear();
             richTextBox_exampleSentenceTranslation2.Clear();
         }
+
+        private void Form_makeNew_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
