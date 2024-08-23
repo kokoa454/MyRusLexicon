@@ -20,6 +20,14 @@ namespace MyRusLexicon
             InitializeComponent();
             dbHelper = new DatabaseHelper();
             form_main = form;
+
+            richTextBox_word.Enter += new EventHandler(clearRichTextBox);
+            richTextBox_translation.Enter += new EventHandler(clearRichTextBox);
+            richTextBox_partOfSpeech.Enter += new EventHandler(clearRichTextBox);
+            richTextBox_exampleSentence1.Enter += new EventHandler(clearRichTextBox);  
+            richTextBox_exampleSentenceTranslation1.Enter += new EventHandler(clearRichTextBox);
+            richTextBox_exampleSentence2.Enter += new EventHandler(clearRichTextBox);
+            richTextBox_exampleSentenceTranslation2.Enter += new EventHandler(clearRichTextBox);
         }
 
         private void button_close_Click(object sender, EventArgs e)
@@ -59,9 +67,21 @@ namespace MyRusLexicon
             richTextBox_exampleSentenceTranslation2.Clear();
         }
 
-        private void Form_makeNew_Load(object sender, EventArgs e)
+        private void clearRichTextBox(object sender, EventArgs e)
         {
-
+            RichTextBox name = sender as RichTextBox;
+            if(name.ForeColor == Color.Gray && 
+              (name.Text == "Введите слова..." ||
+               name.Text == "品詞名" ||
+               name.Text == "訳を入力してください..." ||
+               name.Text == "Введите пример предложения①" ||
+               name.Text == "例文訳①を入力してください" ||
+               name.Text == "Введите пример предложения②" ||
+               name.Text == "例文訳②を入力してください"))
+            {
+                name.Clear();
+                name.ForeColor = Color.Black;
+            }
         }
     }
 }

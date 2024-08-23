@@ -274,6 +274,7 @@
             this.richTextBox_word.Location = new System.Drawing.Point(20, 15);
             this.richTextBox_word.Name = "richTextBox_word";
             this.richTextBox_word.ReadOnly = true;
+            this.richTextBox_word.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
             this.richTextBox_word.Size = new System.Drawing.Size(655, 112);
             this.richTextBox_word.TabIndex = 21;
             this.richTextBox_word.TabStop = false;
@@ -288,6 +289,7 @@
             this.richTextBox_partOfSpeech.Name = "richTextBox_partOfSpeech";
             this.richTextBox_partOfSpeech.ReadOnly = true;
             this.richTextBox_partOfSpeech.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.richTextBox_partOfSpeech.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.richTextBox_partOfSpeech.Size = new System.Drawing.Size(131, 44);
             this.richTextBox_partOfSpeech.TabIndex = 22;
             this.richTextBox_partOfSpeech.TabStop = false;
@@ -301,6 +303,7 @@
             this.richTextBox_translation.Location = new System.Drawing.Point(101, 144);
             this.richTextBox_translation.Name = "richTextBox_translation";
             this.richTextBox_translation.ReadOnly = true;
+            this.richTextBox_translation.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
             this.richTextBox_translation.Size = new System.Drawing.Size(709, 102);
             this.richTextBox_translation.TabIndex = 23;
             this.richTextBox_translation.TabStop = false;
