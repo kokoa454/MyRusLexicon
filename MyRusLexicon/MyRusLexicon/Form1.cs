@@ -39,7 +39,7 @@ namespace MyRusLexicon
 
         private void loadWords() //show list-items from DB
         {
-            var wordList = dbHelper.GetWords();
+            var wordList = dbHelper.getWords();
 
             foreach (var word in wordList)
             {
@@ -52,12 +52,18 @@ namespace MyRusLexicon
             listView.Sort();
         }
 
+        public void refreshWords() //use for Form_edit to reflect changes to listView
+        {
+            listView.Items.Clear();
+            loadWords();
+        }
+
         private void listView_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (listView.SelectedItems.Count > 0)
             {
                 var selectedWord = listView.SelectedItems[0].Text;
-                var wordInfo = dbHelper.GetWords().Find(w => w.Word == selectedWord);
+                var wordInfo = dbHelper.getWords().Find(w => w.Word == selectedWord);
 
                 if (wordInfo != null)
                 {
@@ -128,6 +134,22 @@ namespace MyRusLexicon
 
             return;
         }
+
+        private void toolStripMenuItem_edit_Click(object sender, EventArgs e)
+        {
+            if (listView.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("編集する単語を選んでください。", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                var selectedWord =listView.SelectedItems[0].Text;
+                var  wordInfo = dbHelper.getWords().Find(w => w.Word == selectedWord);
+
+                Form_edit form_edit = new Form_edit(this, wordInfo);
+                form_edit.ShowDialog();
+            }
+        }
     }
 
     //start DB settings
@@ -173,8 +195,25 @@ namespace MyRusLexicon
         {
             if (flg == 1)
             {
-                addWord("Россия", "ロシア", "名詞", "Москва, столица России, славится своими историческими памятниками, такими как Красная площадь и Кремль.", "ロシアの首都であるモスクワは、赤の広場やクレムリンに代表されるように、歴史的建造物で有名だ。", "Когда я думаю о России, мне сразу приходят на ум бескрайние просторы Сибири и величественные горы Урала.", "ロシアについて考えていると、広大なシベリアと偉大なウラル山脈が頭に浮かぶ。");
-                addWord("Япония", "日本", "名詞", "В Японии находится филиал ДВФУ, и японские студенты изучают регионоведение Россиии.", "日本にはロシア極東連邦総合大学の分校があり、日本人学生達はロシア地域学を勉強している。", "Япония, страна восходящего солнца, известна своей уникальной культурой, где традиции гармонично сочетаются с передовыми технологиями и инновациями.", "日出る国、日本は伝統と先進技術が調和している独自の文化で知られている。");
+                addWord(
+                    "Россия", 
+                    "ロシア", 
+                    "名詞", 
+                    "Москва, столица России, славится своими историческими памятниками, такими как Красная площадь и Кремль.", 
+                    "ロシアの首都であるモスクワは、赤の広場やクレムリンに代表されるように、歴史的建造物で有名だ。", 
+                    "Когда я думаю о России, мне сразу приходят на ум бескрайние просторы Сибири и величественные горы Урала.", 
+                    "ロシアについて考えていると、広大なシベリアと偉大なウラル山脈が頭に浮かぶ。"
+                    );
+
+                addWord(
+                    "Япония", 
+                    "日本", 
+                    "名詞", 
+                    "В Японии находится филиал ДВФУ, и японские студенты изучают регионоведение Россиии.",
+                    "日本にはロシア極東連邦総合大学の分校があり、日本人学生達はロシア地域学を勉強している。",
+                    "Япония, страна восходящего солнца, известна своей уникальной культурой, где традиции гармонично сочетаются с передовыми технологиями и инновациями.", 
+                    "日出る国、日本は伝統と先進技術が調和している独自の文化で知られている。"
+                    );
             }
         }
 
@@ -202,25 +241,7 @@ namespace MyRusLexicon
             }
         }
 
-        public void deleteWord(string word)
-        {
-            using (var connection = new SQLiteConnection(connectionString))
-            {
-                connection.Open();
-
-                string query = "DELETE FROM Words WHERE Word = @Word";
-
-                using (SQLiteCommand command = new SQLiteCommand(query, connection))
-                {
-                    command.Parameters.AddWithValue("@Word", word);
-                    command.ExecuteNonQuery();
-                }
-            }
-
-            
-        }
-
-        public List<WordInfo> GetWords()
+        public List<WordInfo> getWords()
         {
             var words = new List<WordInfo>();
 
@@ -252,6 +273,54 @@ namespace MyRusLexicon
 
             return words;
         }
+
+        public void deleteWord(string word)
+        {
+            using (var connection = new SQLiteConnection(connectionString))
+            {
+                connection.Open();
+
+                string query = "DELETE FROM Words WHERE Word = @Word";
+
+                using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Word", word);
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public void updateWord(string originalWord, string newWord, string translation, string partOfSpeech, string exampleSentence1, string exampleSentenceTranslation1, string exampleSentence2, string exampleSentenceTranslation2)
+        {
+            using (var connection = new SQLiteConnection(connectionString))
+            {
+                connection.Open();
+
+                string query = @"
+                    UPDATE Words 
+                    SET Word = @newWord, 
+                        Translation =  @translation, 
+                        PartOfSpeech = @partOfSpeech, 
+                        ExampleSentence1 = @exampleSentence1, 
+                        ExampleSentenceTranslation1 = @exampleSentenceTranslation1,
+                        ExampleSentence2 = @exampleSentence2,
+                        ExampleSentenceTranslation2 = @exampleSentenceTranslation2 
+                WHERE Word = @originalWord";
+
+                using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@newWord", newWord);
+                    command.Parameters.AddWithValue("@translation", translation);
+                    command.Parameters.AddWithValue("@partOfSpeech", partOfSpeech);
+                    command.Parameters.AddWithValue("@exampleSentence1", exampleSentence1);
+                    command.Parameters.AddWithValue("@exampleSentenceTranslation1", exampleSentenceTranslation1);
+                    command.Parameters.AddWithValue("@exampleSentence2", exampleSentence2);
+                    command.Parameters.AddWithValue("@exampleSentenceTranslation2", exampleSentenceTranslation2);
+                    command.Parameters.AddWithValue("@originalWord", originalWord);
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
     }
 
     public class WordInfo
@@ -277,7 +346,7 @@ namespace MyRusLexicon
 
         public override string ToString()
         {
-            return Word;
+            return $"{Word} - {ExampleSentenceTranslation2}";
         }
     }
     //end DB settings

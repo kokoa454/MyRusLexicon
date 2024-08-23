@@ -109,6 +109,7 @@
             this.toolStripMenuItem_edit.Name = "toolStripMenuItem_edit";
             this.toolStripMenuItem_edit.Size = new System.Drawing.Size(45, 20);
             this.toolStripMenuItem_edit.Text = "編集";
+            this.toolStripMenuItem_edit.Click += new System.EventHandler(this.toolStripMenuItem_edit_Click);
             // 
             // toolStripMenuItem_delete
             // 

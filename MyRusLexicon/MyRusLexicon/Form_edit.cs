@@ -10,21 +10,32 @@ using System.Windows.Forms;
 
 namespace MyRusLexicon
 {
-    public partial class Form_makeNew : Form
+    public partial class Form_edit : Form
     {
         private DatabaseHelper dbHelper;
         private Form_main form_main;
+        private WordInfo wordInfo;
 
-        public Form_makeNew(Form_main form)
+        public Form_edit(Form_main form, WordInfo word)
         {
             InitializeComponent();
             dbHelper = new DatabaseHelper();
             form_main = form;
+            wordInfo = word;
+
+            richTextBox_word.Text = wordInfo.Word;
+            richTextBox_translation.Text = wordInfo.Translation;
+            richTextBox_partOfSpeech.Text = wordInfo.PartOfSpeech;
+            richTextBox_exampleSentence1.Text = wordInfo.ExampleSentence1;
+            richTextBox_exampleSentenceTranslation1.Text = wordInfo.ExampleSentenceTranslation1;
+            richTextBox_exampleSentence2.Text = wordInfo.ExampleSentence2;
+            richTextBox_exampleSentenceTranslation2.Text = wordInfo.ExampleSentenceTranslation2;
         }
 
         private void button_close_Click(object sender, EventArgs e)
         {
             this.Close();
+            form_main.Show();
         }
 
         private void button_OK_Click(object sender, EventArgs e)
@@ -43,12 +54,11 @@ namespace MyRusLexicon
                 return;
             }
 
-            dbHelper.addWord(word, translation, partOfSpeech, exampleSentence1, exampleSentenceTranslation1, exampleSentence2, exampleSentenceTranslation2);
+            dbHelper.updateWord(wordInfo.Word, word, translation, partOfSpeech, exampleSentence1, exampleSentenceTranslation1, exampleSentence2, exampleSentenceTranslation2);
 
-            
-            ListViewItem item = new ListViewItem(word);
-            item.SubItems.Add(partOfSpeech);
-            form_main.listView.Items.Add(item);
+            var selectedItem = form_main.listView.SelectedItems[0];
+            selectedItem.Text = word;
+            selectedItem.SubItems[1].Text = partOfSpeech;
 
             richTextBox_word.Clear();
             richTextBox_translation.Clear();
@@ -57,6 +67,11 @@ namespace MyRusLexicon
             richTextBox_exampleSentenceTranslation1.Clear();
             richTextBox_exampleSentence2.Clear();
             richTextBox_exampleSentenceTranslation2.Clear();
+
+            form_main.refreshWords();
+
+            this.Hide();
+            form_main.Show();
         }
     }
 }

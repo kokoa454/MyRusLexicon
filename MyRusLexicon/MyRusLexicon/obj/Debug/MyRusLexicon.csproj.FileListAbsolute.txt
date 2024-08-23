@@ -28,3 +28,4 @@ D:\Programming\MyRusLexicon\MyRusLexicon\MyRusLexicon\bin\Debug\System.Data.SQLi
 D:\Programming\MyRusLexicon\MyRusLexicon\MyRusLexicon\obj\Debug\MyRusLex.525E18D7.Up2Date
 D:\Programming\MyRusLexicon\MyRusLexicon\MyRusLexicon\obj\Debug\MyRusLexicon.Form_main.resources
 D:\Programming\MyRusLexicon\MyRusLexicon\MyRusLexicon\obj\Debug\MyRusLexicon.Form_makeNew.resources
+D:\Programming\MyRusLexicon\MyRusLexicon\MyRusLexicon\obj\Debug\MyRusLexicon.Form_edit.resources
