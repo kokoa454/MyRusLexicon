@@ -195,6 +195,7 @@
             this.richTextBox_partOfSpeech.Font = new System.Drawing.Font("Yu Mincho Demibold", 20.25F, System.Drawing.FontStyle.Bold);
             this.richTextBox_partOfSpeech.Location = new System.Drawing.Point(681, 45);
             this.richTextBox_partOfSpeech.Name = "richTextBox_partOfSpeech";
+            this.richTextBox_partOfSpeech.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.richTextBox_partOfSpeech.Size = new System.Drawing.Size(131, 44);
             this.richTextBox_partOfSpeech.TabIndex = 1;
             this.richTextBox_partOfSpeech.Text = "品詞名";

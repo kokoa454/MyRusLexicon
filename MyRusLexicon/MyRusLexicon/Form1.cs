@@ -12,7 +12,7 @@ using System.IO;
 using System.Collections;
 using System.Runtime.InteropServices;
 
-//Remake UI of Form_edit like Form_makeNew
+//remake UI of Form_edit like Form_makeNew
 //add search func
 
 namespace MyRusLexicon
@@ -22,7 +22,7 @@ namespace MyRusLexicon
         private DatabaseHelper dbHelper;
 
         [DllImport("User32.dll")]
-        static extern int HideCaret(IntPtr hWnd);
+        static extern int HideCaret(IntPtr hWnd); //use to hide carot
         public Form_main()
         {
             InitializeComponent();
@@ -262,7 +262,7 @@ namespace MyRusLexicon
                    "副詞",
                    "Я всегда стараюсь поступать соответственно своим убеждениям.",
                    "私はいつも自身の信念に従って行動するようにしている。",
-                   "В соответствии с новыми правилами, сотрудники должны пройти дополнительное обучение.",
+                   "Сотрудники должны пройти дополнительное обучение соответственно новым правилам.",
                    "新規則に則り、職員は追加教育を受けなければならない。"
                    );
             }

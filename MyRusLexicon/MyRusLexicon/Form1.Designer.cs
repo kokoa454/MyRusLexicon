@@ -287,6 +287,7 @@
             this.richTextBox_partOfSpeech.Location = new System.Drawing.Point(679, 46);
             this.richTextBox_partOfSpeech.Name = "richTextBox_partOfSpeech";
             this.richTextBox_partOfSpeech.ReadOnly = true;
+            this.richTextBox_partOfSpeech.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.richTextBox_partOfSpeech.Size = new System.Drawing.Size(131, 44);
             this.richTextBox_partOfSpeech.TabIndex = 22;
             this.richTextBox_partOfSpeech.TabStop = false;
