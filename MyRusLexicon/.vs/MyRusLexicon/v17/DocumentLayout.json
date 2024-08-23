@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "D:\\Programming\\MyRusLexicon\\MyRusLexicon\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FF5402B1-0535-4DEF-8617-E03E33B0A089}|MyRusLexicon\\MyRusLexicon.csproj|D:\\Programming\\MyRusLexicon\\MyRusLexicon\\myruslexicon\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FF5402B1-0535-4DEF-8617-E03E33B0A089}|MyRusLexicon\\MyRusLexicon.csproj|d:\\programming\\myruslexicon\\myruslexicon\\myruslexicon\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FF5402B1-0535-4DEF-8617-E03E33B0A089}|MyRusLexicon\\MyRusLexicon.csproj|solutionrelative:myruslexicon\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -23,7 +23,7 @@
       "RelativeMoniker": "D:0:0:{FF5402B1-0535-4DEF-8617-E03E33B0A089}|MyRusLexicon\\MyRusLexicon.csproj|solutionrelative:myruslexicon\\form_edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FF5402B1-0535-4DEF-8617-E03E33B0A089}|MyRusLexicon\\MyRusLexicon.csproj|d:\\programming\\myruslexicon\\myruslexicon\\myruslexicon\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{FF5402B1-0535-4DEF-8617-E03E33B0A089}|MyRusLexicon\\MyRusLexicon.csproj|D:\\Programming\\MyRusLexicon\\MyRusLexicon\\myruslexicon\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{FF5402B1-0535-4DEF-8617-E03E33B0A089}|MyRusLexicon\\MyRusLexicon.csproj|solutionrelative:myruslexicon\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -57,7 +57,7 @@
               "RelativeDocumentMoniker": "MyRusLexicon\\Form1.cs",
               "ToolTip": "D:\\Programming\\MyRusLexicon\\MyRusLexicon\\MyRusLexicon\\Form1.cs",
               "RelativeToolTip": "MyRusLexicon\\Form1.cs",
-              "ViewState": "AQIAAGoAAAAAAAAAAADwv20AAAAJAAAA",
+              "ViewState": "AQIAAEwAAAAAAAAAAAAcwFYAAABBAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-23T20:43:57.63Z",
               "IsPinned": true,
@@ -73,8 +73,7 @@
               "RelativeToolTip": "MyRusLexicon\\Form_makeNew.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-22T13:55:29.25Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -87,8 +86,7 @@
               "ViewState": "AQIAAC8AAAAAAAAAAAAwwA8AAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-23T17:04:55.201Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -100,8 +98,7 @@
               "RelativeToolTip": "MyRusLexicon\\Form_edit.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-23T16:50:50.009Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -114,8 +111,7 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAEYAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-23T16:55:17.961Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",

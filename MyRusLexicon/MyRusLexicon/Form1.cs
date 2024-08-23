@@ -75,8 +75,17 @@ namespace MyRusLexicon
 
         public void refreshWords() //use for Form_edit to reflect changes to listView
         {
+            int selectedIndex = listView.SelectedIndices.Count > 0 ? listView.SelectedIndices[0] : -1;
+
             listView.Items.Clear();
             loadWords();
+
+            if(selectedIndex >= 0 && selectedIndex < listView.Items.Count)
+            {
+                listView.Items[selectedIndex].Selected = true;
+                listView.Items[selectedIndex].Focused = true;
+                updateRichTextBox(listView.Items[selectedIndex]);
+            }
         }
 
         private void listView_SelectedIndexChanged(object sender, EventArgs e)
@@ -84,6 +93,36 @@ namespace MyRusLexicon
             if (listView.SelectedItems.Count > 0)
             {
                 var selectedWord = listView.SelectedItems[0].Text;
+                var wordInfo = dbHelper.getWords().Find(w => w.Word == selectedWord);
+
+                if (wordInfo != null)
+                {
+                    richTextBox_word.Visible = true;
+                    label_textTranslation.Visible = true;
+                    richTextBox_translation.Visible = true;
+                    richTextBox_partOfSpeech.Visible = true;
+                    label_textExampleSentence.Visible = true;
+                    richTextBox_exampleSentence1.Visible = true;
+                    richTextBox_exampleSentenceTranslation1.Visible = true;
+                    richTextBox_exampleSentence2.Visible = true;
+                    richTextBox_exampleSentenceTranslation2.Visible = true;
+
+                    richTextBox_word.Text = wordInfo.Word;
+                    richTextBox_translation.Text = wordInfo.Translation;
+                    richTextBox_partOfSpeech.Text = wordInfo.PartOfSpeech;
+                    richTextBox_exampleSentence1.Text = wordInfo.ExampleSentence1;
+                    richTextBox_exampleSentenceTranslation1.Text = wordInfo.ExampleSentenceTranslation1;
+                    richTextBox_exampleSentence2.Text = wordInfo.ExampleSentence2;
+                    richTextBox_exampleSentenceTranslation2.Text = wordInfo.ExampleSentenceTranslation2;
+                }
+            }
+        }
+
+        private void updateRichTextBox(ListViewItem item)
+        {
+            if (listView.SelectedItems.Count > 0)
+            {
+                var selectedWord = item.Text;
                 var wordInfo = dbHelper.getWords().Find(w => w.Word == selectedWord);
 
                 if (wordInfo != null)
