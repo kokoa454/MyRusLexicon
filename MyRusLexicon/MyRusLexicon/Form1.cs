@@ -15,6 +15,8 @@ using System.Runtime.InteropServices;
 //remake UI of Form_edit like Form_makeNew
 //add search func
 
+//i wanna add func with chatgpt api to suggest example sentences for users in future
+
 namespace MyRusLexicon
 {
     public partial class Form_main : Form
