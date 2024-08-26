@@ -12,7 +12,7 @@ using System.IO;
 using System.Collections;
 using System.Runtime.InteropServices;
 
-//add search func
+//consider a way to search for words without case sensitivity(if eng, it works, but no russian)
 
 //i wanna add func with chatgpt api to suggest example sentences for users in future
 
@@ -210,6 +210,24 @@ namespace MyRusLexicon
                 Form_edit form_edit = new Form_edit(this, wordInfo);
                 form_edit.ShowDialog();
             }
+        }
+
+        private void button_search_Click(object sender, EventArgs e)
+        {
+            var word = textBox_search.Text;
+            var searchResults = dbHelper.searchWord(word);
+
+            listView.Items.Clear();
+
+            foreach (var wordInfo in searchResults)
+            {
+                ListViewItem item = new ListViewItem(wordInfo.Word);
+                item.SubItems.Add(wordInfo.PartOfSpeech);
+                listView.Items.Add(item);
+            }
+
+            listView.ListViewItemSorter = new ListViewItemComparer(0);
+            listView.Sort();
         }
     }
 
@@ -411,6 +429,43 @@ namespace MyRusLexicon
                     command.ExecuteNonQuery();
                 }
             }
+        }
+
+        public List<WordInfo> searchWord(string word)
+        {
+            var words = new List<WordInfo>();
+
+            using (var connection = new SQLiteConnection(connectionString))
+            {
+                connection.Open();
+
+                string selectQuery = "SELECT * FROM Words WHERE Word LIKE @Word || '%' COLLATE NOCASE";
+
+                using (var command = new SQLiteCommand(selectQuery, connection))
+                {
+                    command.Parameters.AddWithValue("@Word", word);
+
+                    using (var reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            var wordInfo = new WordInfo(
+                                reader["Word"].ToString(),
+                                reader["Translation"].ToString(),
+                                reader["PartOfSpeech"].ToString(),
+                                reader["ExampleSentence1"].ToString(),
+                                reader["ExampleSentenceTranslation1"].ToString(),
+                                reader["ExampleSentence2"].ToString(),
+                                reader["ExampleSentenceTranslation2"].ToString()
+                            );
+
+                            words.Add(wordInfo);
+                        }
+                    }
+                }
+            }
+
+            return words;
         }
     }
 

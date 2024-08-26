@@ -77,6 +77,7 @@
             this.button_search.TabIndex = 1;
             this.button_search.Text = "検索";
             this.button_search.UseVisualStyleBackColor = false;
+            this.button_search.Click += new System.EventHandler(this.button_search_Click);
             // 
             // contextMenuStrip1
             // 
