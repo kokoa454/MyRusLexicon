@@ -37,13 +37,13 @@
             this.richTextBox_exampleSentence2 = new System.Windows.Forms.RichTextBox();
             this.richTextBox_exampleSentenceTranslation1 = new System.Windows.Forms.RichTextBox();
             this.panel = new System.Windows.Forms.Panel();
+            this.label_asterisk3 = new System.Windows.Forms.Label();
+            this.label_asterisk2 = new System.Windows.Forms.Label();
+            this.label_asterisk1 = new System.Windows.Forms.Label();
             this.richTextBox_exampleSentenceTranslation2 = new System.Windows.Forms.RichTextBox();
             this.richTextBox_word = new System.Windows.Forms.RichTextBox();
             this.richTextBox_translation = new System.Windows.Forms.RichTextBox();
             this.richTextBox_partOfSpeech = new System.Windows.Forms.RichTextBox();
-            this.label_asterisk1 = new System.Windows.Forms.Label();
-            this.label_asterisk2 = new System.Windows.Forms.Label();
-            this.label_asterisk3 = new System.Windows.Forms.Label();
             this.panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -159,6 +159,36 @@
             this.panel.Size = new System.Drawing.Size(832, 737);
             this.panel.TabIndex = 17;
             // 
+            // label_asterisk3
+            // 
+            this.label_asterisk3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_asterisk3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.label_asterisk3.Location = new System.Drawing.Point(97, 132);
+            this.label_asterisk3.Name = "label_asterisk3";
+            this.label_asterisk3.Size = new System.Drawing.Size(17, 15);
+            this.label_asterisk3.TabIndex = 20;
+            this.label_asterisk3.Text = "*";
+            // 
+            // label_asterisk2
+            // 
+            this.label_asterisk2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_asterisk2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.label_asterisk2.Location = new System.Drawing.Point(677, 27);
+            this.label_asterisk2.Name = "label_asterisk2";
+            this.label_asterisk2.Size = new System.Drawing.Size(17, 15);
+            this.label_asterisk2.TabIndex = 19;
+            this.label_asterisk2.Text = "*";
+            // 
+            // label_asterisk1
+            // 
+            this.label_asterisk1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_asterisk1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.label_asterisk1.Location = new System.Drawing.Point(16, 0);
+            this.label_asterisk1.Name = "label_asterisk1";
+            this.label_asterisk1.Size = new System.Drawing.Size(17, 15);
+            this.label_asterisk1.TabIndex = 18;
+            this.label_asterisk1.Text = "*";
+            // 
             // richTextBox_exampleSentenceTranslation2
             // 
             this.richTextBox_exampleSentenceTranslation2.BackColor = System.Drawing.SystemColors.Control;
@@ -212,36 +242,6 @@
             this.richTextBox_partOfSpeech.TabIndex = 1;
             this.richTextBox_partOfSpeech.Text = "品詞名";
             // 
-            // label_asterisk1
-            // 
-            this.label_asterisk1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_asterisk1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label_asterisk1.Location = new System.Drawing.Point(16, 0);
-            this.label_asterisk1.Name = "label_asterisk1";
-            this.label_asterisk1.Size = new System.Drawing.Size(17, 15);
-            this.label_asterisk1.TabIndex = 18;
-            this.label_asterisk1.Text = "*";
-            // 
-            // label_asterisk2
-            // 
-            this.label_asterisk2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_asterisk2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label_asterisk2.Location = new System.Drawing.Point(677, 27);
-            this.label_asterisk2.Name = "label_asterisk2";
-            this.label_asterisk2.Size = new System.Drawing.Size(17, 15);
-            this.label_asterisk2.TabIndex = 19;
-            this.label_asterisk2.Text = "*";
-            // 
-            // label_asterisk3
-            // 
-            this.label_asterisk3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_asterisk3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label_asterisk3.Location = new System.Drawing.Point(97, 132);
-            this.label_asterisk3.Name = "label_asterisk3";
-            this.label_asterisk3.Size = new System.Drawing.Size(17, 15);
-            this.label_asterisk3.TabIndex = 20;
-            this.label_asterisk3.Text = "*";
-            // 
             // Form_makeNew
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -252,6 +252,8 @@
             this.Controls.Add(this.label_titleForm);
             this.Controls.Add(this.button_OK);
             this.Controls.Add(this.button_close);
+            this.MaximumSize = new System.Drawing.Size(849, 946);
+            this.MinimumSize = new System.Drawing.Size(849, 946);
             this.Name = "Form_makeNew";
             this.Text = "新規登録 - MyRusLexicon";
             this.panel.ResumeLayout(false);
