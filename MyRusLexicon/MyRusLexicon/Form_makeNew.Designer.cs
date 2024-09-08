@@ -213,7 +213,7 @@
             this.richTextBox_word.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
             this.richTextBox_word.Size = new System.Drawing.Size(655, 112);
             this.richTextBox_word.TabIndex = 0;
-            this.richTextBox_word.Text = "Введите слова...";
+            this.richTextBox_word.Text = "Введите слово...";
             // 
             // richTextBox_translation
             // 

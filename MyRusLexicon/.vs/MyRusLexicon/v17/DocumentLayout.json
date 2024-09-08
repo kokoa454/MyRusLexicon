@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "D:\\Programming\\MyRusLexicon\\MyRusLexicon\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FF5402B1-0535-4DEF-8617-E03E33B0A089}|MyRusLexicon\\MyRusLexicon.csproj|d:\\programming\\myruslexicon\\myruslexicon\\myruslexicon\\form_edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{FF5402B1-0535-4DEF-8617-E03E33B0A089}|MyRusLexicon\\MyRusLexicon.csproj|d:\\programming\\myruslexicon\\myruslexicon\\myruslexicon\\form_makenew.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FF5402B1-0535-4DEF-8617-E03E33B0A089}|MyRusLexicon\\MyRusLexicon.csproj|solutionrelative:myruslexicon\\form_makenew.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF5402B1-0535-4DEF-8617-E03E33B0A089}|MyRusLexicon\\MyRusLexicon.csproj|D:\\Programming\\MyRusLexicon\\MyRusLexicon\\myruslexicon\\form_edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{FF5402B1-0535-4DEF-8617-E03E33B0A089}|MyRusLexicon\\MyRusLexicon.csproj|solutionrelative:myruslexicon\\form_edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FF5402B1-0535-4DEF-8617-E03E33B0A089}|MyRusLexicon\\MyRusLexicon.csproj|D:\\Programming\\MyRusLexicon\\MyRusLexicon\\myruslexicon\\form_makenew.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FF5402B1-0535-4DEF-8617-E03E33B0A089}|MyRusLexicon\\MyRusLexicon.csproj|solutionrelative:myruslexicon\\form_makenew.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF5402B1-0535-4DEF-8617-E03E33B0A089}|MyRusLexicon\\MyRusLexicon.csproj|D:\\Programming\\MyRusLexicon\\MyRusLexicon\\myruslexicon\\form_makenew.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FF5402B1-0535-4DEF-8617-E03E33B0A089}|MyRusLexicon\\MyRusLexicon.csproj|solutionrelative:myruslexicon\\form_makenew.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FF5402B1-0535-4DEF-8617-E03E33B0A089}|MyRusLexicon\\MyRusLexicon.csproj|D:\\Programming\\MyRusLexicon\\MyRusLexicon\\myruslexicon\\form_about.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -42,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
@@ -71,7 +71,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Form_makeNew.cs [Design]",
               "DocumentMoniker": "D:\\Programming\\MyRusLexicon\\MyRusLexicon\\MyRusLexicon\\Form_makeNew.cs",
               "RelativeDocumentMoniker": "MyRusLexicon\\Form_makeNew.cs",
@@ -79,11 +79,12 @@
               "RelativeToolTip": "MyRusLexicon\\Form_makeNew.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-22T13:55:29.25Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Form_makeNew.cs",
               "DocumentMoniker": "D:\\Programming\\MyRusLexicon\\MyRusLexicon\\MyRusLexicon\\Form_makeNew.cs",
               "RelativeDocumentMoniker": "MyRusLexicon\\Form_makeNew.cs",
@@ -96,7 +97,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Form_edit.cs [Design]",
               "DocumentMoniker": "D:\\Programming\\MyRusLexicon\\MyRusLexicon\\MyRusLexicon\\Form_edit.cs",
               "RelativeDocumentMoniker": "MyRusLexicon\\Form_edit.cs",
@@ -104,8 +105,7 @@
               "RelativeToolTip": "MyRusLexicon\\Form_edit.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-23T16:50:50.009Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
