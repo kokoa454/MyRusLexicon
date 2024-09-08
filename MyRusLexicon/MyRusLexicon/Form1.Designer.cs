@@ -124,6 +124,7 @@
             this.toolStripMenuItem_about.Name = "toolStripMenuItem_about";
             this.toolStripMenuItem_about.Size = new System.Drawing.Size(88, 20);
             this.toolStripMenuItem_about.Text = "アプリについて";
+            this.toolStripMenuItem_about.Click += new System.EventHandler(this.toolStripMenuItem_about_Click);
             // 
             // label_lineTop
             // 

@@ -229,6 +229,12 @@ namespace MyRusLexicon
             listView.ListViewItemSorter = new ListViewItemComparer(0);
             listView.Sort();
         }
+
+        private void toolStripMenuItem_about_Click(object sender, EventArgs e)
+        {
+            Form_about form_about = new Form_about();
+            form_about.Show();
+        }
     }
 
     //start DB settings
