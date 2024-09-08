@@ -3,7 +3,15 @@
   "WorkspaceRootPath": "D:\\Programming\\MyRusLexicon\\MyRusLexicon\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FF5402B1-0535-4DEF-8617-E03E33B0A089}|MyRusLexicon\\MyRusLexicon.csproj|d:\\programming\\myruslexicon\\myruslexicon\\myruslexicon\\form_makenew.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{FF5402B1-0535-4DEF-8617-E03E33B0A089}|MyRusLexicon\\MyRusLexicon.csproj|d:\\programming\\myruslexicon\\myruslexicon\\myruslexicon\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF5402B1-0535-4DEF-8617-E03E33B0A089}|MyRusLexicon\\MyRusLexicon.csproj|solutionrelative:myruslexicon\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF5402B1-0535-4DEF-8617-E03E33B0A089}|MyRusLexicon\\MyRusLexicon.csproj|D:\\Programming\\MyRusLexicon\\MyRusLexicon\\myruslexicon\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FF5402B1-0535-4DEF-8617-E03E33B0A089}|MyRusLexicon\\MyRusLexicon.csproj|solutionrelative:myruslexicon\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF5402B1-0535-4DEF-8617-E03E33B0A089}|MyRusLexicon\\MyRusLexicon.csproj|D:\\Programming\\MyRusLexicon\\MyRusLexicon\\myruslexicon\\form_makenew.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{FF5402B1-0535-4DEF-8617-E03E33B0A089}|MyRusLexicon\\MyRusLexicon.csproj|solutionrelative:myruslexicon\\form_makenew.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -17,14 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{FF5402B1-0535-4DEF-8617-E03E33B0A089}|MyRusLexicon\\MyRusLexicon.csproj|D:\\Programming\\MyRusLexicon\\MyRusLexicon\\myruslexicon\\form_about.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{FF5402B1-0535-4DEF-8617-E03E33B0A089}|MyRusLexicon\\MyRusLexicon.csproj|solutionrelative:myruslexicon\\form_about.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF5402B1-0535-4DEF-8617-E03E33B0A089}|MyRusLexicon\\MyRusLexicon.csproj|D:\\Programming\\MyRusLexicon\\MyRusLexicon\\myruslexicon\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FF5402B1-0535-4DEF-8617-E03E33B0A089}|MyRusLexicon\\MyRusLexicon.csproj|solutionrelative:myruslexicon\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF5402B1-0535-4DEF-8617-E03E33B0A089}|MyRusLexicon\\MyRusLexicon.csproj|D:\\Programming\\MyRusLexicon\\MyRusLexicon\\myruslexicon\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FF5402B1-0535-4DEF-8617-E03E33B0A089}|MyRusLexicon\\MyRusLexicon.csproj|solutionrelative:myruslexicon\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FF5402B1-0535-4DEF-8617-E03E33B0A089}|MyRusLexicon\\MyRusLexicon.csproj|D:\\Programming\\MyRusLexicon\\MyRusLexicon\\myruslexicon\\form_edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,11 +42,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "D:\\Programming\\MyRusLexicon\\MyRusLexicon\\MyRusLexicon\\Form1.cs",
               "RelativeDocumentMoniker": "MyRusLexicon\\Form1.cs",
@@ -54,24 +54,26 @@
               "RelativeToolTip": "MyRusLexicon\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-21T18:54:44.094Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "Form1.cs",
               "DocumentMoniker": "D:\\Programming\\MyRusLexicon\\MyRusLexicon\\MyRusLexicon\\Form1.cs",
               "RelativeDocumentMoniker": "MyRusLexicon\\Form1.cs",
               "ToolTip": "D:\\Programming\\MyRusLexicon\\MyRusLexicon\\MyRusLexicon\\Form1.cs",
               "RelativeToolTip": "MyRusLexicon\\Form1.cs",
-              "ViewState": "AQIAANEAAAAAAAAAAAAgwOsAAAAbAAAA",
+              "ViewState": "AQIAAA4BAAAAAAAAAAAiwAsAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-23T20:43:57.63Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Form_makeNew.cs [Design]",
               "DocumentMoniker": "D:\\Programming\\MyRusLexicon\\MyRusLexicon\\MyRusLexicon\\Form_makeNew.cs",
               "RelativeDocumentMoniker": "MyRusLexicon\\Form_makeNew.cs",
@@ -79,12 +81,11 @@
               "RelativeToolTip": "MyRusLexicon\\Form_makeNew.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-22T13:55:29.25Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Form_makeNew.cs",
               "DocumentMoniker": "D:\\Programming\\MyRusLexicon\\MyRusLexicon\\MyRusLexicon\\Form_makeNew.cs",
               "RelativeDocumentMoniker": "MyRusLexicon\\Form_makeNew.cs",
@@ -97,7 +98,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Form_edit.cs [Design]",
               "DocumentMoniker": "D:\\Programming\\MyRusLexicon\\MyRusLexicon\\MyRusLexicon\\Form_edit.cs",
               "RelativeDocumentMoniker": "MyRusLexicon\\Form_edit.cs",
@@ -138,7 +139,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Form_about.cs [Design]",
               "DocumentMoniker": "D:\\Programming\\MyRusLexicon\\MyRusLexicon\\MyRusLexicon\\Form_about.cs",
               "RelativeDocumentMoniker": "MyRusLexicon\\Form_about.cs",
