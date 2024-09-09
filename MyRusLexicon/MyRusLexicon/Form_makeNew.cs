@@ -71,7 +71,7 @@ namespace MyRusLexicon
         {
             RichTextBox name = sender as RichTextBox;
             if(name.ForeColor == Color.Gray && 
-              (name.Text == "Введите слова..." ||
+              (name.Text == "Введите слово..." ||
                name.Text == "品詞名" ||
                name.Text == "訳を入力してください..." ||
                name.Text == "Введите пример предложения①" ||
