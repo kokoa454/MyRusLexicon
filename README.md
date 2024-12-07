@@ -42,7 +42,7 @@ MyRusLexiconでは単語とその訳、品詞名、例文と例文訳を2つま�
 </p>
   
   
-## 仕様技術
+## 使用技術
 ・言語: C#  
 ・データベース: SQLite  
 ・開発環境: Visual Studio  
